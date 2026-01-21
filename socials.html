@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-
-<!-- Auther: Shorouk Abdelaziz  https://shorouk.dev -->
-
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Socials</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 
   <style>
     * {
@@ -19,26 +17,27 @@
     }
 
     body {
-      display: grid;
       font-family: "Poppins", sans-serif;
-      place-items: center;
     }
 
     .wrapper {
-      padding-top: 10px;
-      display: inline-flex;
+      padding: 10px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
 
+    .social {
+      margin-right: 16px;
+      cursor: pointer;
     }
 
     .icon {
-      /* Change the icon size here */
       font-size: 2em;
-      /* Change the icons colours here*/
-      color: #000000
+      color: #000000;
+      transition: color 0.2s ease-in-out;
     }
 
-
-  
     .instagram:hover {
       color: rgb(241, 102, 217);
     }
@@ -46,62 +45,36 @@
     .linkedin:hover {
       color: #0e76a8;
     }
-
-   
-
-    .social {
-      position: relative;
-      margin: left;
-      cursor: pointer;
-    }
   </style>
-
 </head>
 
 <body>
 
-  <body>
+  <div class="wrapper">
 
-    <div class="wrapper">
-
-      <!-- Start instagram Icon -->
-      <div id="instagram" onclick="navigate(this.id)" class="social">
-        <span class="icon instagram"><i class="fab fa-instagram"></i></span>
-      </div>
-      <!-- End instagram Icon -->
-
-      <!-- Start linkedin Icon -->
-      <div id="linkedin" onclick="navigate(this.id)" class="social">
-        <span class="icon linkedin"><i class="fab fa-linkedin"></i></span>
-      </div>
-      <!-- End linkedin Icon -->
-
-
-
+    <div id="instagram" onclick="navigate(this.id)" class="social">
+      <span class="icon instagram">
+        <i class="fab fa-instagram"></i>
+      </span>
     </div>
 
+    <div id="linkedin" onclick="navigate(this.id)" class="social">
+      <span class="icon linkedin">
+        <i class="fab fa-linkedin"></i>
+      </span>
+    </div>
 
+  </div>
 
-
-    <script>
-      function navigate(id) {
-
-        //if you want the URL to open in the same window use '_parent'  instead of '_blank'
-
-       
-        if (id === "instagram") {
-          window.open("https://www.instagram.com/designscribbles?igsh=NWhzdWU2eHZrZ2Vs&utm_source=qr", '_blank').focus(); //Add the url to your instagram account
-        }
-        else if (id === "linkedin") {
-          window.open("http://www.linkedin.com/in/umangbee", '_blank').focus(); //Add the url to your pinterest account
-        }
-       
+  <script>
+    function navigate(id) {
+      if (id === "instagram") {
+        window.open("https://www.instagram.com/", "_blank");
+      } else if (id === "linkedin") {
+        window.open("https://www.linkedin.com/", "_blank");
       }
+    }
+  </script>
 
-    </script>
-
-
-
-  </body>
-
+</body>
 </html>
