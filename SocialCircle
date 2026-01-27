@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Icons</title>
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+
+    .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 10px;
+      padding-left: 1.4em; /* one icon padding from left */
+    }
+
+    .social {
+      margin-right: 16px;
+      cursor: pointer;
+    }
+
+    .icon {
+      font-size: 1.4em; /* 70% size */
+      color: #000000;
+      transition: color 0.2s ease-in-out;
+    }
+
+    .linkedin:hover {
+      color: #0e76a8;
+    }
+
+    .instagram:hover {
+      color: rgb(241, 102, 217);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <!-- LinkedIn -->
+    <div id="linkedin" class="social" onclick="navigate(this.id)">
+      <span class="icon linkedin">
+        <i class="fab fa-linkedin"></i>
+      </span>
+    </div>
+
+    <!-- Instagram -->
+    <div id="instagram" class="social" onclick="navigate(this.id)">
+      <span class="icon instagram">
+        <i class="fab fa-instagram"></i>
+      </span>
+    </div>
+
+  </div>
+
+  <script>
+    function navigate(id) {
+      if (id === "linkedin") {
+        window.open("https://www.linkedin.com/in/umangbee/", "_blank");
+      }
+      if (id === "instagram") {
+        window.open("https://www.instagram.com/designscribbles/?igsh=NWhzdWU2eHZrZ2Vs&utm_source=qr#", "_blank");
+      }
+    }
+  </script>
+
+</body>
+</html>
