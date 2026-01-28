@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Social Icons</title>
+  <title>Social Widgets</title>
 
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
@@ -29,22 +29,38 @@
     }
 
     .social {
+      background-color: #eae9e9;
+      width: 38px;  /* 70% of 55px */
+      height: 38px; /* 70% of 55px */
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
       margin-right: 16px;
       cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
     }
 
     .icon {
-      font-size: 1.4em; /* 70% size */
+      font-size: 0.84em; /* 70% of 1.2em */
       color: #000000;
       transition: color 0.2s ease-in-out;
     }
 
+    .social:hover .icon {
+      color: #ffffff;
+    }
+
     .linkedin:hover {
-      color: #0e76a8;
+      background-color: #0e76a8;
     }
 
     .instagram:hover {
-      color: rgb(241, 102, 217);
+      background: radial-gradient(
+        circle,
+        rgba(241, 102, 217, 1) 10%,
+        rgba(252, 176, 69, 1) 76%,
+        rgba(253, 29, 29, 1) 100%
+      );
     }
   </style>
 </head>
@@ -54,15 +70,15 @@
   <div class="wrapper">
 
     <!-- LinkedIn -->
-    <div id="linkedin" class="social" onclick="navigate(this.id)">
-      <span class="icon linkedin">
+    <div class="social linkedin" onclick="navigate('linkedin')">
+      <span class="icon">
         <i class="fab fa-linkedin"></i>
       </span>
     </div>
 
     <!-- Instagram -->
-    <div id="instagram" class="social" onclick="navigate(this.id)">
-      <span class="icon instagram">
+    <div class="social instagram" onclick="navigate('instagram')">
+      <span class="icon">
         <i class="fab fa-instagram"></i>
       </span>
     </div>
@@ -75,7 +91,7 @@
         window.open("https://www.linkedin.com/in/umangbee/", "_blank");
       }
       if (id === "instagram") {
-        window.open("https://www.instagram.com/designscribbles/?igsh=NWhzdWU2eHZrZ2Vs&utm_source=qr#", "_blank");
+        window.open("https:https://www.instagram.com/designscribbles/?igsh=NWhzdWU2eHZrZ2Vs&utm_source=qr#", "_blank");
       }
     }
   </script>
