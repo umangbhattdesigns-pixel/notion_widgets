@@ -16,6 +16,11 @@
       box-sizing: border-box;
     }
 
+    /* ✅ KEY FIX */
+    html, body {
+      background: transparent !important;
+    }
+
     body {
       font-family: "Poppins", sans-serif;
     }
@@ -25,13 +30,13 @@
       align-items: center;
       justify-content: flex-start;
       padding: 10px;
-      padding-left: 1.4em; /* one icon padding from left */
+      padding-left: 1.4em;
     }
 
     .social {
       background-color: #eae9e9;
-      width: 38px;  /* 70% of 55px */
-      height: 38px; /* 70% of 55px */
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
       display: grid;
       place-items: center;
@@ -41,7 +46,7 @@
     }
 
     .icon {
-      font-size: 0.84em; /* 70% of 1.2em */
+      font-size: 0.84em;
       color: #000000;
       transition: color 0.2s ease-in-out;
     }
@@ -69,14 +74,12 @@
 
   <div class="wrapper">
 
-    <!-- LinkedIn -->
     <div class="social linkedin" onclick="navigate('linkedin')">
       <span class="icon">
         <i class="fab fa-linkedin"></i>
       </span>
     </div>
 
-    <!-- Instagram -->
     <div class="social instagram" onclick="navigate('instagram')">
       <span class="icon">
         <i class="fab fa-instagram"></i>
